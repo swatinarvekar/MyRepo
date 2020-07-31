@@ -1,0 +1,6 @@
+---
+- name: ping
+  gather_facts: true
+  hosts: all
+  tasks:
+    - ping:
