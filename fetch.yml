@@ -7,7 +7,7 @@
         dest: /tmp/bbb.txt
         flat: yes
     - name: pull file
-      synchronized:
+      synchronize:
         src: /tmp/test_sync.txt
         dest: /tmp/test_sync.txt
         mode: pull
