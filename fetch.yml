@@ -1,0 +1,17 @@
+- hosts: all
+  gather_facts: no
+  tasks:
+    - name: fetch file
+      fetch:
+        src: /tmp/aaa.txt
+        dest: /tmp/bbb.txt
+        flat: yes
+    - name: pull file
+      synchronized:
+        src: /tmp/test_sync.txt
+        dest: /tmp/test_sync.txt
+        mode: pull
+    - name: pull file
+      copy:
+        src: /tmp/test_copy.txt
+        dest: /tmp/test_copy.txt
