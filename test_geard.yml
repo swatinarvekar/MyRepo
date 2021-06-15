@@ -1,6 +1,5 @@
 - name: test playbook
   hosts: localhost
-  become: yes
   tasks:
   - include_vars: ssh_key.yml
 
