@@ -5,4 +5,4 @@
       file: ssh_key.yml
 
   - name: Test command
-    command: "awx --conf.host ec2-13-235-23-200.ap-south-1.compute.amazonaws.com --conf.username admin --conf.password tower credentials create --name 'lnx_git' --credential_type 'Source Control' --inputs '{ 'username': 'git', 'ssh_key_data': {{ ssh_id_rsa }} |base64 --decode }' --organization 'org'"
+    command: "awx --conf.host ec2-13-235-23-200.ap-south-1.compute.amazonaws.com --conf.username admin --conf.password tower credentials create --name 'lnx_git' --credential_type 'Source Control' --inputs '{ 'username': 'git', 'ssh_key_data': {{ ssh_private_key }} }' --organization 'org'"
