@@ -2,4 +2,4 @@
 - include_vars: ssh_key.yml
 
 - name: Test command
-  command: "awx -k  --conf.host https://ec2-13-234-122-88.ap-south-1.compute.amazonaws.com --conf.username admin --conf.password tower credentials create --name 'lnx_git' --credential_type 'Source Control' --inputs '{ 'username': 'git', 'ssh_key_data': {{ ssh_private_key }} | base64 --decode }' --organization 'test_org'"
+  command: "awx -k  --conf.host https://ec2-13-234-122-88.ap-south-1.compute.amazonaws.com --conf.username admin --conf.password tower credentials create --name 'lnx_git' --credential_type 'Source Control' --inputs '{ 'username': 'git', 'ssh_key_data': {{ ssh_private_key | base64 --decode }} }' --organization 'test_org'"
