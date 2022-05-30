@@ -3,4 +3,12 @@
   gather_facts: true
   hosts: all
   tasks:
-    - ping:
+  - name:ping
+    ping:
+    tags:
+    - packages
+    
+  - name: Configure the service
+    setup:
+    tags:
+    - configuration
