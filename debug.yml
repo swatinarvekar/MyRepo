@@ -1,0 +1,6 @@
+- name: debug cred vars
+  hosts: all
+  tasks:
+  - name: debug
+    debug:
+      msg: "({ user }}"
