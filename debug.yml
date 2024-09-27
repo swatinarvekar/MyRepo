@@ -3,4 +3,5 @@
   tasks:
   - name: debug
     debug:
-      var: ansible_ssh_user
+      var1: ansible_ssh_user
+      var2: ansible_ssh_password
