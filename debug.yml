@@ -3,4 +3,4 @@
   tasks:
   - name: debug
     debug:
-      msg: "({ user }}"
+      var: "({ user }}"
