@@ -1,8 +1,9 @@
 - name: debug cred vars
   hosts: all
   tasks:
-  - name: debug
+  - name: Debug User
     debug:
-      vars:
-        var1: ansible_ssh_user
-        var2: ansible_ssh_password
+      var: ansible_ssh_user
+  - name: Debug Password
+    debug:
+      var: ansible_ssh_password
