@@ -3,4 +3,4 @@
   tasks:
   - name: debug
     debug:
-      var: user
+      var: ansible_ssh_user
