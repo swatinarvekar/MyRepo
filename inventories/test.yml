@@ -1,0 +1,8 @@
+---
+ungrouped:
+  hosts:
+    green.example.com:
+      ansible_host:               X.X.X.X
+    blue.example.com:
+    Y.Y.Y.Y:
+    Z.Z.Z.Z:
