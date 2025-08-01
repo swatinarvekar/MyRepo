@@ -1,0 +1,11 @@
+- hosts: localhost
+  gather_facts: no
+  tasks:
+  - name: Export users
+    ansible.controller.export:
+      validate_certs: false
+      users: "all"
+    register: users_export
+  - name: Show result
+    debug:
+      var: users_export
